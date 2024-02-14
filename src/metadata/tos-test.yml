@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/tos-test
+
+idspace: TOS-TEST
+base_url: /obo/tos-test
+
+products:
+- tos-test.owl: https://raw.githubusercontent.com/amakunin/tos-test/main/tos-test.owl
+- tos-test.obo: https://raw.githubusercontent.com/amakunin/tos-test/main/tos-test.obo
+
+term_browser: ontobee
+example_terms:
+- TOS-TEST_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/amakunin/tos-test/v
+
+- prefix: /tracker/
+  replacement: https://github.com/amakunin/tos-test/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/TOS-TEST?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/amakunin/tos-test/main/
+
